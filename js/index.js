@@ -1,4 +1,4 @@
-import Game from './Game.js';
+import Game from './Engine/Game.js';
 import Player from './Player.js';
 import Ball from './Ball.js';
 import CPU from './CPU.js';
@@ -14,4 +14,3 @@ game.entities.push(new Ball);
 game.entities.push(new CPU(false));
 
 // Should probably implement a Scene System and a SceneManager
-

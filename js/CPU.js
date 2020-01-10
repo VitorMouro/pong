@@ -1,4 +1,4 @@
-import Entity from './Entity.js';
+import Entity from './Engine/Entity.js';
 
 export default class CPU extends Entity {
     constructor(activated) {
