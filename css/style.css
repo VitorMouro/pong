@@ -7,5 +7,7 @@ html, body {
 
 canvas {
     border: 1px solid white;
-    margin: 5px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
 }

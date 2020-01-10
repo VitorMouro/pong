@@ -3,7 +3,7 @@ import Entity from './Entity.js';
 export default class Player extends Entity {
     constructor() {
         super();
-        this.type = 'square';
+        this.type = 'player';
         this.height = 100 * window.game.scale;
         this.width = 10 * window.game.scale;
         this.position.x = 50 * window.game.scale;

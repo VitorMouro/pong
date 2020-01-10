@@ -6,8 +6,8 @@ export default class Game {
         this.canvas = document.getElementById('canvas');
         this.ctx = canvas.getContext('2d');
         this.scale = 1;
-        this.InputManager = new InputManager();
         this.entities = [];
+        this.InputManager = new InputManager();
         window.game = this;
         this.lastTime = 0;
         requestAnimationFrame(this.loop.bind(this));
