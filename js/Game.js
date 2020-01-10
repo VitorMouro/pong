@@ -22,8 +22,8 @@ export default class Game {
     }
 
     draw (ctx) {
-        this.entities.forEach((entity => {
+        this.entities.forEach((entity) => {
             entity.draw(ctx);
-        }));
+        });
     }
 }

@@ -13,6 +13,7 @@ export default class Ball extends Entity{
             y: 1
         }
         this.speed = 1000;
+        this.type = 'circle';
     }
 
     draw (ctx) {

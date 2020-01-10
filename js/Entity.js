@@ -5,6 +5,7 @@ export default class Entity {
             y: 0
         }
         this.color = 'white';
+        this.type = 'none';
     }
 
     update (dt) {

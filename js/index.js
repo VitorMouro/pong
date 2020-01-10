@@ -3,12 +3,13 @@ import Game from "./Game.js";
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
 
-canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+canvas.width = canvas.height*16/9;
 
 let game = new Game();
 window.game = game;
 window.canvas = canvas;
+window.scale = canvas.height/1080;
 
 let lastTime = 0;
 function gameLoop (timestamp) {
