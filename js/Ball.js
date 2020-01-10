@@ -4,15 +4,15 @@ export default class Ball extends Entity {
 
     constructor() {
         super();
-        this.position.x = window.game.canvas.width/2;
-        this.position.y = window.game.canvas.height/2;
-        this.radius = 10*window.game.scale;
+        this.position.x = window.game.canvas.width / 2;
+        this.position.y = window.game.canvas.height / 2;
+        this.radius = 10 * window.game.scale;
         this.color = 'white';
         this.velocity = {
             x: Math.cos(45),
             y: Math.sin(45)
         }
-        this.speed = 100*window.game.scale;
+        this.speed = 500 * window.game.scale;
         this.type = 'circle';
     }
 

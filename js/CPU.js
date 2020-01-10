@@ -1,12 +1,13 @@
 import Entity from './Entity.js';
 
-export default class Player extends Entity {
-    constructor() {
+export default class CPU extends Entity {
+    constructor(activated) {
         super();
+        this.activated = activated;
         this.type = 'square';
         this.height = 100 * window.game.scale;
         this.width = 10 * window.game.scale;
-        this.position.x = 50 * window.game.scale;
+        this.position.x = (window.game.canvas.width - 50 * window.game.scale) - this.width;
         this.position.y = (window.game.canvas.height / 2) - this.height / 2;
         this.color = 'white';
         this.velocity = 500 * window.game.scale;
@@ -14,9 +15,9 @@ export default class Player extends Entity {
 
     update(dt) {
         window.game.InputManager.inputSequence.forEach((input) => {
-            if (input == 'w' && this.position.y > 0) {
+            if (input == 'up' && this.position.y > 0) {
                 this.position.y -= dt / 1000 * this.velocity;
-            } else if (input == 's' && this.position.y < window.game.canvas.height - this.height) {
+            } else if (input == 'down' && this.position.y < window.game.canvas.height - this.height) {
                 this.position.y += dt / 1000 * this.velocity;
             }
         });

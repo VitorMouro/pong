@@ -4,3 +4,8 @@ html, body {
     background-color: black;
     overflow: hidden;
 }
+
+canvas {
+    border: 1px solid white;
+    margin: 5px;
+}

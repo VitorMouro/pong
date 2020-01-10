@@ -19,8 +19,6 @@ export default class Game {
         this.dt = timestamp - this.lastTime;
         this.lastTime = timestamp;
 
-        //console.log('FPS: ' + Math.round(1000/dt));
-
         this.update(this.dt);
         this.clear(this.ctx);
         this.draw(this.ctx);
