@@ -16,6 +16,8 @@ function gameLoop (timestamp) {
     let dt = timestamp - lastTime;
     lastTime = timestamp;
 
+    //console.log('FPS: ' + Math.round(1000/dt));
+
     game.update(dt);
     game.clear(ctx);
     game.draw(ctx);

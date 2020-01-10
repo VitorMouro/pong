@@ -49,7 +49,7 @@ export default class InputManager {
             if (this.inputSequence.indexOf('down') == -1)
                 this.inputSequence.push('down');
         }
-        console.log(event.keyCode);
+        //console.log(event.keyCode);
     }
 
 }

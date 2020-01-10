@@ -14,9 +14,9 @@ export default class Player extends Entity {
 
     update (dt) {
         window.game.InputManager.inputSequence.forEach((input) => {
-            if(input == 'up' && this.position.y > 0){
+            if(input == 'up' && this.position.y*window.scale > 0){
                 this.position.y -= dt/1000*this.velocity*window.scale;
-            }else if (input == 'down' && this.position.y < window.canvas.height-this.height){
+            }else if (input == 'down' && this.position.y*window.scale < window.canvas.height-this.height*window.scale){
                 this.position.y += dt/1000*this.velocity*window.scale;
             }
         });
