@@ -1,6 +1,6 @@
 export default class InputManager {
 
-    constructor () {
+    constructor() {
         window.addEventListener('keydown', this.keyPressed.bind(this), false);
         window.addEventListener('keyup', this.keyUnpressed.bind(this), false);
         this.key = {
@@ -16,8 +16,8 @@ export default class InputManager {
         };
         this.inputSequence = [];
     };
-    
-    keyUnpressed (event) {
+
+    keyUnpressed(event) {
         if (event.keyCode == this.key.right) {
             if (this.inputSequence.indexOf('right') > -1)
                 this.inputSequence.splice(this.inputSequence.indexOf('right'), 1);
@@ -34,7 +34,7 @@ export default class InputManager {
         }
     }
 
-    keyPressed (event) {
+    keyPressed(event) {
         if (event.keyCode == this.key.right) {
             if (this.inputSequence.indexOf('right') == -1)
                 this.inputSequence.push('right');

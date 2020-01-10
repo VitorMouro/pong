@@ -1,27 +1,13 @@
-import Game from "./Game.js";
-
-let canvas = document.getElementById('canvas');
-let ctx = canvas.getContext('2d');
-
-canvas.height = window.innerHeight;
-canvas.width = canvas.height*16/9;
+import Game from './Game.js';
+import Player from './Player.js';
+import Ball from './Ball.js';
 
 let game = new Game();
-window.game = game;
-window.canvas = canvas;
-window.scale = canvas.height/1080;
 
-let lastTime = 0;
-function gameLoop (timestamp) {
-    let dt = timestamp - lastTime;
-    lastTime = timestamp;
+game.canvas.height = window.innerHeight;
+game.canvas.width = game.canvas.height * 16 / 9;
+game.scale = game.canvas.height / 1080;
 
-    //console.log('FPS: ' + Math.round(1000/dt));
+game.entities.push(new Player);
+game.entities.push(new Ball);
 
-    game.update(dt);
-    game.clear(ctx);
-    game.draw(ctx);
-
-    requestAnimationFrame(gameLoop);
-}
-requestAnimationFrame(gameLoop);

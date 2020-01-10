@@ -1,5 +1,5 @@
 export default class Entity {
-    constructor () {
+    constructor() {
         this.position = {
             x: 0,
             y: 0
@@ -8,11 +8,11 @@ export default class Entity {
         this.type = 'none';
     }
 
-    update (dt) {
+    update(dt) {
         return;
     }
 
-    draw (ctx) {
+    draw(ctx) {
         return;
     }
 }
