@@ -1,4 +1,5 @@
 import InputManager from './InputManager.js';
+import SceneManager from './SceneManager.js';
 
 export default class Game {
 
@@ -6,8 +7,9 @@ export default class Game {
         this.canvas = document.getElementById('canvas');
         this.ctx = canvas.getContext('2d');
         this.scale = 1;
-        this.entities = [];
-        this.InputManager = new InputManager();
+        this.scene = null;
+        this.SceneManager = new SceneManager;
+        this.InputManager = new InputManager;
         window.game = this;
         this.lastTime = 0;
         requestAnimationFrame(this.loop.bind(this));
@@ -22,11 +24,10 @@ export default class Game {
         this.update(this.dt);
         this.clear(this.ctx);
         this.draw(this.ctx);
-
     }
 
     update(dt) {
-        this.entities.forEach((entity) => {
+        this.scene.entities.forEach((entity) => {
             entity.update(dt);
         });
     }
@@ -36,7 +37,7 @@ export default class Game {
     }
 
     draw(ctx) {
-        this.entities.forEach((entity) => {
+        this.scene.entities.forEach((entity) => {
             entity.draw(ctx);
         });
     }
