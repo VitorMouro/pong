@@ -1,4 +1,4 @@
-import Entity from './Engine/Entity.js';
+import Entity from '../Engine/Entity.js';
 
 export default class Ball extends Entity {
 
