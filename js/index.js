@@ -1,4 +1,4 @@
-import game from './Engine/bootstrap.js';
+import game from './Engine/Engine.js';
 
 // Scenes
 import mainScene from './Scenes/mainScene.js';

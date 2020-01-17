@@ -4,7 +4,7 @@ export default class CPU extends Entity {
     constructor(activated) {
         super();
         this.activated = activated;
-        this.type = 'player';
+        this.type = 'rect';
         this.height = 100 * window.game.scale;
         this.width = 10 * window.game.scale;
         this.position.x = (window.game.canvas.width - 50 * window.game.scale) - this.width;
